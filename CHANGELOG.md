@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/dzhigit/metaverse/compare/v1.1.0...v1.2.0) (2025-04-24)
+
+
+### Features
+
+* **BD:** SDK SupaBase ([40e8477](https://github.com/dzhigit/metaverse/commit/40e8477a1bd9a2f168a6d42d53892abe89105b78))
+
 ## 1.1.0 (2025-04-24)
 
 
