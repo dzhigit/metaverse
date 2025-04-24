@@ -1,8 +1,11 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxtgame",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "release": "standard-version",
+    "changelog": "standard-version --release-as minor",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -11,6 +14,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.15.4",
+    "standard-version": "^9.3.0",
     "@supabase/supabase-js": "^2.49.4",
     "nuxt": "^3.16.2",
     "nuxt-telegram-auth": "^1.2.0",
