@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# dotenv
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.sw?
+
+# React build (если используется в build-папке, но обычно нет)
+#frontend/build/
+
+# React dev
+frontend/node_modules/
+frontend/.env
+frontend/.DS_Store
+frontend/.parcel-cache
+
+# ts-node-dev cache
+.tmp/
+
+# Others
+coverage/
