@@ -1,6 +1,6 @@
 {
   "name": "altynverse",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "My Metaversion",
   "main": "index.js",
   "scripts": {
