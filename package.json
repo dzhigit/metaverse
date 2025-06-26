@@ -1,6 +1,6 @@
 {
   "name": "altynverse",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "My Metaversion",
   "main": "index.js",
   "scripts": {
@@ -16,8 +16,7 @@
   "dependencies": {
     "express": "^4.21.2",
     "socket.io": "^4.8.1",
-    "standard-version": "^9.5.0",
-    "ws": "^8.18.2"
+    "standard-version": "^9.5.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",

