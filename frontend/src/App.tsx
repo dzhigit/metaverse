@@ -6,10 +6,12 @@ import socket from "./socket";
 
 import { Miner } from "./components/Miner";
 import { TotalHashes } from "./components/ShowTotalHashes";
+import { getFingerprint } from "./fingerprint";
 
 function App() {
 const [messages, setMessages] = useState<string[]>([]);
-  const [input, setInput] = useState("");
+const [fingerprint, setFingerprint] = useState<string | null>(null);
+const [input, setInput] = useState("");
 
   const sendMessage = () => {
     if (input.trim() !== "") {
@@ -19,6 +21,19 @@ const [messages, setMessages] = useState<string[]>([]);
   };
 
   useEffect(() => {
+
+     getFingerprint().then((fp) => {
+      setFingerprint(fp);
+
+      // Отправим инфу на сервер
+      socket.emit("clientInfo", {
+        deviceId: fp,
+        cores: navigator.hardwareConcurrency,
+        lang: navigator.language,
+        tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      });
+    });
+    
     socket.on("chat message", (message: string) => {
       setMessages((prev) => [...prev, message]);
     });
@@ -36,7 +51,7 @@ const [messages, setMessages] = useState<string[]>([]);
     <div className="App">
       <Miner/>
       <TotalHashes/>
-
+      <h1>Ваш Fingerprint: {fingerprint}</h1>
          <div>
       <h1>Чат</h1>
       <div style={{ border: "1px solid gray", padding: "10px", height: "200px", overflowY: "scroll" }}>
