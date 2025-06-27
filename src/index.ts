@@ -14,6 +14,7 @@ const io = new Server(server, {
   },
 });
 
+
 const PORT = 3000;
 
 const buildPath = path.join(__dirname, '../frontend/dist');
@@ -34,6 +35,12 @@ app.get('/', (_req, res) => {
 // Обработка подключения
 io.on('connection', (socket) => {
   console.log(`📡 Клиент подключён: ${socket.id}`);
+
+   socket.on("chat message", (data) => {
+    console.log("Получено:", data);
+    // Отправляем обратно
+    io.emit("chat message", data);
+  });
 
   socket.on('disconnect', () => {
     console.log(`❌ Клиент отключён: ${socket.id}`);

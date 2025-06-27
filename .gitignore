@@ -1,5 +1,5 @@
 # Node.js
-node_modules/
+node_modules/*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -27,7 +27,7 @@ Thumbs.db
 *.sw?
 
 # React build (если используется в build-папке, но обычно нет)
-#frontend/build/
+frontend/dist/
 
 # React dev
 frontend/node_modules/
