@@ -1,16 +1,13 @@
 
 import './App.css';
+import { Miner } from "./components/Miner";
+import { TotalHashes } from "./components/ShowTotalHashes";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-       
-      </header>
+      <Miner/>
+      <TotalHashes/>
     </div>
   );
 }
