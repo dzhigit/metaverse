@@ -16,7 +16,7 @@ const io = new Server(server, {
 
 const PORT = 3000;
 
-const buildPath = path.join(__dirname, '../frontend/build');
+const buildPath = path.join(__dirname, '../frontend/dist');
 app.use(express.static(buildPath));
 
 app.get('*', (_req, res) => {
