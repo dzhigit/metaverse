@@ -40,3 +40,5 @@ frontend/.parcel-cache
 
 # Others
 coverage/
+
+eror.txt*
