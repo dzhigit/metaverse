@@ -8,27 +8,26 @@ import { Miner } from "./components/Miner";
 import { TotalHashes } from "./components/ShowTotalHashes";
 
 function App() {
-
-const [message, setMessage] = useState("");
+const [messages, setMessages] = useState<string[]>([]);
+  const [input, setInput] = useState("");
 
   const sendMessage = () => {
-    socket.emit("chat message", { text: message });
-    setMessage(""); // очистим поле
+    if (input.trim() !== "") {
+      socket.emit("chat message", input);
+      setInput("");
+    }
   };
 
-
   useEffect(() => {
-    // Получаем сообщения от сервера
-    socket.on("chat message", (data) => {
-      console.log("С сервера:", data);
+    socket.on("chat message", (message: string) => {
+      setMessages((prev) => [...prev, message]);
     });
 
-    // Очистка подписки при размонтировании
+    // Очистка подписки
     return () => {
       socket.off("chat message");
     };
   }, []);
-
 
 
 
@@ -38,12 +37,20 @@ const [message, setMessage] = useState("");
       <Miner/>
       <TotalHashes/>
 
-        <input
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Напиши сообщение"
+         <div>
+      <h1>Чат</h1>
+      <div style={{ border: "1px solid gray", padding: "10px", height: "200px", overflowY: "scroll" }}>
+        {messages.map((msg, idx) => (
+          <div key={idx}>{msg}</div>
+        ))}
+      </div>
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Введите сообщение"
       />
       <button onClick={sendMessage}>Отправить</button>
+    </div>
     </div>
 
     
