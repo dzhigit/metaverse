@@ -1,0 +1,8 @@
+rashid@Altyn:~/github/altynverse/frontend$ npm install react-scripts@latest
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: react-scripts@5.0.1
+npm error Found: typescript@5.8.3
+npm error node_modules/typescript
+npm error   typescript@"^5.8.3" from the root project
