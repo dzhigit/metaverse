@@ -1,8 +1,18 @@
+
+//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import NewPage from './pages/NewPage';
+
 // src/App.tsx
 import { useEffect, useState } from "react";
 import socket from "./socket";
 
-
+ 
 
 import { Miner } from "./components/Miner";
 import { TotalHashes } from "./components/ShowTotalHashes";
@@ -48,6 +58,16 @@ const [input, setInput] = useState("");
 
 
   return (
+<>
+      <Router>
+      <Routes>
+
+        <Route path="/new" element={<NewPage />} />
+        
+      </Routes>
+    </Router>
+
+
     <div className="App">
       <Miner/>
       <TotalHashes/>
@@ -68,7 +88,7 @@ const [input, setInput] = useState("");
     </div>
     </div>
 
-    
+</>    
   );
 }
 
