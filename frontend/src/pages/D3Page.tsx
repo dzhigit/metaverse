@@ -77,10 +77,14 @@ const D3Page = () => {
       .domain(["Низкая активность", "Средняя активность", "Высокая активность"])
       .range(["#999", "#1f77b4", "#ff7f0e"]);
 
+
+      
     // Оси
     g.append("g")
       .attr("transform", `translate(0, ${contentHeight})`)
+      
       .call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%H:%M")));
+      
 
     g.append("g").call(d3.axisLeft(yScale));
 
