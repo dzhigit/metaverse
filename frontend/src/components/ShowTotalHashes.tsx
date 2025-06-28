@@ -11,9 +11,19 @@ export const TotalHashes = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+const getStatus = () => {
+  if (totalHashes === undefined) return 'Loading...';
+  if (totalHashes === 0) return 'Waiting...';
+  return 'Running';
+};
+
+
   return (
     <div>
-      Total hashes: {totalHashes !== undefined ? totalHashes : "Loading..."}
+      Total hashes: {totalHashes !== undefined ? totalHashes : "Loading..."} <br />
+    Status: <strong>{getStatus()}</strong>
     </div>
   );
 };
+
