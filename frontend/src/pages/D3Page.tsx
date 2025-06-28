@@ -82,7 +82,6 @@ const D3Page = () => {
     // Оси
     g.append("g")
       .attr("transform", `translate(0, ${contentHeight})`)
-      
       .call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%H:%M")));
       
 

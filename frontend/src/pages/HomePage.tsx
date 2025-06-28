@@ -41,6 +41,7 @@ export default function HomePage() {
     <div className="App">
       <Miner />
       <TotalHashes />
+      
       <h1>Ваш Fingerprint: {fingerprint}</h1>
       <div>
         <h1>Чат</h1>
