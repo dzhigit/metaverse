@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 export const TotalHashes = () => {
   const [totalHashes, setTotalHashes] = useState<number | undefined>(undefined);
 
@@ -22,7 +23,8 @@ const getStatus = () => {
   return (
     <div>
       Total hashes: {totalHashes !== undefined ? totalHashes : "Loading..."} <br />
-    Status: <strong>{getStatus()}</strong>
+      Status: <strong>{getStatus()}</strong>
+   
     </div>
   );
 };
