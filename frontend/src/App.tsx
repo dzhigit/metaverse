@@ -6,7 +6,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
+
+
 import NewPage from './pages/NewPage';
+import D3Page from "./pages/D3Page"; // путь может отличаться
+
 
 // src/App.tsx
 import { useEffect, useState } from "react";
@@ -63,7 +68,7 @@ const [input, setInput] = useState("");
       <Routes>
 
         <Route path="/new" element={<NewPage />} />
-        
+        <Route path="/d3" element={<D3Page />} />
       </Routes>
     </Router>
 
