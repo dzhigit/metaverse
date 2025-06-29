@@ -20,6 +20,11 @@ const PORT = 3000;
 const buildPath = path.join(__dirname, '../frontend/dist');
 app.use(express.static(buildPath));
 
+// Новая раздача статики из docs (добавь эту строку)
+app.use('/docs', express.static(path.join(__dirname, 'docs')));
+
+
+
 app.get('*', (_req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'));
 });
